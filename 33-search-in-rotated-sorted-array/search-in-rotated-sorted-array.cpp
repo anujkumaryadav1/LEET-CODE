@@ -11,7 +11,12 @@ public:
              if(target == nums[mid]){
                 return mid;
              }
-            if(nums[s] <= nums[mid]){
+
+             if(nums[s] == nums[mid] && nums[mid] == nums[e]){
+                s++;
+                e--;
+             }
+            else if(nums[s] <= nums[mid]){
                 if(target >= nums[s] && target < nums[mid]){
                     e =mid-1;
                 }
